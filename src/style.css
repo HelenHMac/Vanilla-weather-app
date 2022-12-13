@@ -1,0 +1,16 @@
+.appname {
+text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+.inline {
+   
+    display:inline-table;
+}
+.formenter {
+    display: inline-table;
+    text-align: center;
+}
+
