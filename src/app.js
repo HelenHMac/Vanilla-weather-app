@@ -63,20 +63,28 @@ function formatDate7(timestamp) {
     return `${day}`;
 }
 
+
+
 function displayTemperature(response) {
+    
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
-    let iconElement = document.querySelector("#icon");
+    let iconmainElement = document.querySelector("#iconmain");
+
+   
     let icon1Element = document.querySelector("#icon1");
     let icon2Element = document.querySelector("#icon2");
     let icon3Element = document.querySelector("#icon3");
     let icon4Element = document.querySelector("#icon4");
     let icon5Element = document.querySelector("#icon5");
     let icon6Element = document.querySelector("#icon6");
+
+    
+
     let weekdayElement = document.querySelector("#weekday");
     let weekday1Element = document.querySelector("#weekday1");
     let weekday2Element = document.querySelector("#weekday2");
@@ -91,8 +99,10 @@ function displayTemperature(response) {
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = response.data.wind.speed;
     dateElement.innerHTML = formatDate(response.data.dt*1000);
-    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-    iconElement.setAttribute("alt", response.data.weather[0].description);
+    iconmainElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconmainElement.setAttribute("alt", response.data.weather[0].description);
+
+    
     icon1Element.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     icon1Element.setAttribute("alt", response.data.weather[0].description);
     icon2Element.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -105,6 +115,8 @@ function displayTemperature(response) {
     icon5Element.setAttribute("alt", response.data.weather[0].description);
     icon6Element.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     icon6Element.setAttribute("alt", response.data.weather[0].description);
+
+
     weekdayElement.innerHTML = formatDate1(response.data.dt*1000);
     weekday1Element.innerHTML = formatDate2(response.data.dt*1000);
     weekday2Element.innerHTML = formatDate3(response.data.dt*1000);
@@ -114,10 +126,33 @@ function displayTemperature(response) {
     weekday6Element.innerHTML = formatDate7(response.data.dt*1000);
 }
 
-let apiKey = "ce8e825e9de2cecd077619df37fa3d4f";
-let city = "Los Angeles"
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+    let apiKey = "ce8e825e9de2cecd077619df37fa3d4f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
 
 
 
-axios.get(apiUrl).then(displayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+
+//function displayForecast(response) {
+//    console.log(response.data);
+//    let iconElement = document.querySelector("#icon");
+//    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+//    iconElement.setAttribute("alt", response.data.weather[0].description);
+//}
+
+
+//let city = "Los Angeles"
+//let apiURLforecast = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=7&appid=${apiKey}&units=metric`
+//axios.get(apiURLforecast).then(displayForecast);
+

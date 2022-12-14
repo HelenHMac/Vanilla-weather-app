@@ -1,5 +1,5 @@
 .weather-app {
-    max-width: 800px;
+    max-width: 770px;
     margin: 30px auto;
     padding: 20px;
     border: 1px solid rgb(185, 194, 234);
@@ -11,18 +11,22 @@ text-align: center;
 }
 
 .center {
-    text-align: center;
+    
+    position:relative;
+    margin:auto;
 }
 .inline {
     display:inline-table;
 }
 .formenter {
     display: inline-table;
-    text-align: center;
+    border-style: groove;
+
 }
 
 .city {
     font-weight: bold;
+    font-size: 30px;
     
 }
 
@@ -36,4 +40,16 @@ text-align: center;
     padding-left: 6px;
     padding-right: 6px;
     text-align: center;
+}
+
+.temperaturemain {
+    font-size: 80px;
+    margin-left: 50px;
+}
+
+.degree {
+    font-size: 40px;
+    vertical-align:super;
+
+
 }

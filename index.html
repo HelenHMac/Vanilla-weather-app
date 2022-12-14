@@ -11,15 +11,24 @@
 </head>
 <body class="weather-app">
     <div class="container" >
-    <h1 class="appname">
+    <h1 class="appname mb-4">
         Weather app
     </h1>
-    <p class="center">
     
-    <form action="" class="formenter">Enter a city</form>
-    <button>Search</button>
-    
-</p>
+
+    <form action="" id="search-form" class="mb-3"> 
+        <div class="row">
+            <div class="col-5">
+                <input type="search" placeholder="Enter a city" class="form-control" id="city-input"/>
+            </div>
+            <div class="col-3">
+                <input type="submit" value="Search" class="btn btn-primary w-100"/>
+            </div>
+        </div>
+    </form>
+
+ 
+
     <table>
         <tr>
         <td>
@@ -27,11 +36,14 @@
             <li id="city" class="city"> </li>
         
             <li id="date" class="inline"></li>, <span id="description"></span>
-            <li>Humidity: <span id="humidity"></span>%, Wind: <span id="wind"></span>km/hx</li>
+            <li>Humidity: <span id="humidity"></span>%, Wind: <span id="wind"></span>km/h</li>
             </ul>
         </td>
         <td>
-            <strong id="temperature"></strong><sup>°C</sup>
+            <span><strong id="temperature" class="temperaturemain"></strong><sup class="degree">°C</sup></span>
+        </td>
+        <td>
+            <img src="" alt="" id="iconmain">
         </td>
     </tr>
     </table>
@@ -39,13 +51,13 @@
     <p>
 <table>
         <tr>
-            <td class="weekdays" id="weekday">Mon</td>
-            <td class="weekdays" id="weekday1">Tue</td>
-            <td class="weekdays" id="weekday2">Wed</td>
-            <td class="weekdays" id="weekday3">Thu</td>
-            <td class="weekdays" id="weekday4">Fri</td>
-            <td class="weekdays" id="weekday5">Sat</td>
-            <td class="weekdays" id="weekday6">Sun</td>
+            <td class="weekdays" id="weekday"></td>
+            <td class="weekdays" id="weekday1"></td>
+            <td class="weekdays" id="weekday2"></td>
+            <td class="weekdays" id="weekday3"></td>
+            <td class="weekdays" id="weekday4"></td>
+            <td class="weekdays" id="weekday5"></td>
+            <td class="weekdays" id="weekday6"></td>
         </tr>
         <tr>
             <td> <img src="" alt="" id="icon"> </td>
