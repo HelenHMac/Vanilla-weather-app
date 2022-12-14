@@ -27,6 +27,8 @@ function formatDate(timestamp) {
         let iconmainElement = document.querySelector("#iconmain");
 
         let currentDate = new Date(); 
+
+        celciusTemp = response.data.main.temp;
     
        
         let icon1Element = document.querySelector("#icon1");
@@ -74,6 +76,32 @@ function formatDate(timestamp) {
 
 
 
-    search("New York");
+
   
-    
+
+    function displayFarenheitTemp(event) {
+    event.preventDefault();
+    celcius.classList.remove("active");
+    farenheit.classList.add("active");
+    let farenheitTemp = ((celciusTemp) * 9)/5 + 32;
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(farenheitTemp);
+}
+
+    function displayCelciusTemp(event) {
+    event.preventDefault();
+    farenheit.classList.remove("active");
+    celcius.classList.add("active");
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+    let celciusTemp = null;
+
+    let farenheit = document.querySelector("#farenheit");
+    farenheit.addEventListener("click", displayFarenheitTemp);
+
+    let celcius = document.querySelector("#celcius");
+    celcius.addEventListener("click", displayCelciusTemp);
+
+    search("New York");

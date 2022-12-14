@@ -1,5 +1,5 @@
 .weather-app {
-    max-width: 600px;
+    max-width: 650px;
     margin: 100px auto;
     border: 7px solid rgba(255, 254, 254, 0.6);
     border-radius: 10px;
@@ -48,8 +48,22 @@
 
 .degree {
     font-size: 40px;
-    vertical-align:super;
+    vertical-align: super;
     color: rgb(36, 111, 152);
+    padding-bottom: 100px;
+}
+
+.units {
+    text-decoration: none;
+}
+
+.active {
+color:  rgb(36, 111, 152);
+cursor: default;
+}
+
+.image1 {
+    max-width: 90px;
 }
 
 .button {
@@ -65,3 +79,4 @@
     column-width: 400px;
     padding-left: 10px;
 }
+
