@@ -9,16 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 </head>
-<body class="weather-app">
-    <div class="container1">
-    <h1 class="appname mb-4">
-        Weather app
-    </h1>
-    
 
+
+<body class="weather-app" style="background-image: url(clouds.jpg);">
+    <div class="container1">
+        <h1 class="app">
+            <div>
+            Weather app
+            </div>
+        </h1>
     <form action="" id="search-form" class="mb-3"> 
         <div class="row">
-            <div class="col-5">
+            <div class="col-8">
                 <input type="search" placeholder="Enter a city" class="form-control" id="city-input"/>
             </div>
             <div class="col-3">
@@ -34,9 +36,8 @@
         <td>
             <ul class="listnone">  
             <li id="city" class="city"> </li>
-        
-            <li id="date" class="inline"></li>, <span id="description"></span>
-            <li>Humidity: <span id="humidity"></span>%, Wind: <span id="wind"></span>km/h</li>
+            <li id="date" class="inline kursiv"></li>, <span id="description" class="kursiv"></span>
+            <li class="kursiv">Humidity: <span id="humidity" class="kursiv"></span>%, Wind: <span id="wind" class="kursiv"></span>km/h</li>
             </ul>
         </td>
         <td>
