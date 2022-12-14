@@ -13,57 +13,8 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
     }
     
-    
-    function formatDate1(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+1];
-        return `${day}`;
-    }
-    
-    function formatDate2(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+2];
-        return `${day}`;
-    }
-    
-    function formatDate3(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+3];
-        return `${day}`;
-    }
-    
-    function formatDate4(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+4];
-        return `${day}`;
-    }
-    
-    function formatDate5(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+5];
-        return `${day}`;
-    }
-    
-    function formatDate6(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+6];
-        return `${day}`;
-    }
-    
-    function formatDate7(timestamp) {
-        let date = new Date(timestamp);
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let day = days[date.getDay()+7];
-        return `${day}`;
-    }
-    
-    
+
+
     
     function displayTemperature(response) {
         
@@ -74,6 +25,8 @@ function formatDate(timestamp) {
         let windElement = document.querySelector("#wind");
         let dateElement = document.querySelector("#date");
         let iconmainElement = document.querySelector("#iconmain");
+
+        let currentDate = new Date(); 
     
        
         let icon1Element = document.querySelector("#icon1");
@@ -98,7 +51,7 @@ function formatDate(timestamp) {
         descriptionElement.innerHTML = response.data.weather[0].description;
         humidityElement.innerHTML = response.data.main.humidity;
         windElement.innerHTML = response.data.wind.speed;
-        dateElement.innerHTML = formatDate(response.data.dt*1000);
+        dateElement.innerHTML = formatDate(currentDate);
         iconmainElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
         iconmainElement.setAttribute("alt", response.data.weather[0].description);
     }
