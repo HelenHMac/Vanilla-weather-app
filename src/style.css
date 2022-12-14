@@ -1,13 +1,21 @@
 .weather-app {
     max-width: 770px;
-    margin: 30px auto;
-    padding: 20px;
-    border: 1px solid rgb(185, 194, 234);
-    font-family:Arial, Helvetica, sans-serif ;
+    margin: 50px auto;
+    border: 3px solid rgb(244, 244, 244);
+    border-style: groove;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(244, 227, 249);
+}
+
+
+.container1 {
+    background-color: rgb(215, 182, 233);
+    padding: 5px 25px;
 }
 
 .appname {
 text-align: center;
+font-weight: bold;
 }
 
 .center {
@@ -50,6 +58,11 @@ text-align: center;
 .degree {
     font-size: 40px;
     vertical-align:super;
+}
 
-
+.button {
+    background-color: rgb(245, 210, 203);
+    border:rgb(245, 210, 203);
+    border-radius: 5px;
+    padding:6px 40px;
 }
