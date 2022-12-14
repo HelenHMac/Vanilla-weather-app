@@ -77,16 +77,3 @@ function formatDate(timestamp) {
     search("New York");
   
     
-    //function displayForecast(response) {
-    //    console.log(response.data);
-    //    let iconElement = document.querySelector("#icon");
-    //    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-    //    iconElement.setAttribute("alt", response.data.weather[0].description);
-    //}
-    
-    
-    //let city = "Los Angeles"
-    //let apiURLforecast = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=7&appid=${apiKey}&units=metric`
-    //axios.get(apiURLforecast).then(displayForecast);
-    
-    
