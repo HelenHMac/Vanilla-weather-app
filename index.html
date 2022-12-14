@@ -20,22 +20,23 @@
     <button>Search</button>
     
 </p>
-<p>
-    <table class="inline">
-        <tr class="city"> 
-            <td id="city"> </td>     
-        </tr>
+    <table>
         <tr>
-            <td>Tuesday 11:30, <span id="description"></span></td>
-        </tr>
-        <tr>
-            <td>Humidity: <span id="humidity"></span>%, Wind: <span id="wind"></span>km/hx</td>
-        </tr>
+        <td>
+            <ul class="listnone">  
+            <li id="city" class="city"> </li>
         
+            <li id="date" class="inline"></li>, <span id="description"></span>
+            <li>Humidity: <span id="humidity"></span>%, Wind: <span id="wind"></span>km/hx</li>
+            </ul>
+        </td>
+        <td>
+            <strong id="temperature"></strong><sup>°C</sup>
+        </td>
+    </tr>
     </table>
-    <strong id="temperature"></strong><sup>°C</sup>
-    
-</p>
+
+    <p>
 <table>
         <tr>
             <td> Mon </td>
@@ -100,7 +101,7 @@
             </td>
         </tr>
 </table>
-
+</p>
 </div>
     <script src="src/app.js"></script>
 

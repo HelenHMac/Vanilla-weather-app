@@ -26,3 +26,9 @@ text-align: center;
     
 }
 
+.listnone {
+    list-style: none;
+    margin:auto;
+    padding: 0px;
+}
+
