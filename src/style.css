@@ -1,3 +1,11 @@
+.weather-app {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid rgb(185, 194, 234);
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
 .appname {
 text-align: center;
 }
@@ -6,11 +14,15 @@ text-align: center;
     text-align: center;
 }
 .inline {
-   
     display:inline-table;
 }
 .formenter {
     display: inline-table;
     text-align: center;
+}
+
+.city {
+    font-weight: bold;
+    
 }
 
